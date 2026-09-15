@@ -1,0 +1,27 @@
+RECAP TOFU paper-code repository
+
+This distribution incorporates and modifies code from two MIT-licensed
+upstream projects. Their original license texts are preserved in the source
+tree and remain controlling for their respective material.
+
+1. ULD
+   Project: Reversing the Forget-Retain Objectives: An Efficient LLM
+            Unlearning Framework from Logit Difference
+   Upstream: https://github.com/UCSB-NLP-Chang/ULD
+   Copyright (c) 2024 Jiabao Ji
+   License: MIT; see ULD/LICENSE
+
+2. OpenUnlearning
+   Project: OpenUnlearning: Accelerating LLM Unlearning via Unified
+            Benchmarking of Methods and Metrics
+   Upstream: https://github.com/locuslab/open-unlearning
+   Copyright (c) 2025 CMU Locus Lab
+   License: MIT; see open-unlearning/LICENSE
+
+RECAP-specific changes include retain-free factorial assistant data handling,
+reference-preserving assistant losses, role-specific reference-delta
+composition, release validation, and experiment wrappers. This NOTICE records
+attribution; it does not replace either upstream license or grant rights to
+third-party datasets, pretrained models, generated artifacts, or hosted API
+services. Those materials are not included and remain subject to their own
+terms.

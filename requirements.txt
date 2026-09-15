@@ -1,0 +1,36 @@
+# Reproducibility dependencies for the RECAP/TOFU code repository.
+# The audited B0 training and evaluation used different Python environments.
+# Install a host/CUDA-appropriate PyTorch build first when the default wheel is
+# unsuitable. Python 3.10 selects the training pins; Python 3.11 selects the
+# evaluation pins. Other Python versions were not verified.
+
+torch==2.1.1; python_version >= "3.10" and python_version < "3.11"
+torch==2.4.1; python_version >= "3.11" and python_version < "3.12"
+numpy==1.26.4; python_version >= "3.10" and python_version < "3.11"
+numpy==2.2.3; python_version >= "3.11" and python_version < "3.12"
+datasets==2.17.1; python_version >= "3.10" and python_version < "3.11"
+datasets==3.0.1; python_version >= "3.11" and python_version < "3.12"
+
+transformers==4.51.3
+tokenizers==0.21.4
+peft==0.15.2
+accelerate==0.34.2
+huggingface-hub==0.36.0
+safetensors>=0.4,<1
+hydra-core==1.3.2
+hydra-colorlog==1.2.0
+omegaconf==2.3.0
+lightning==2.2.1
+pytorch-lightning==2.2.1
+pandas==2.2.2
+scipy==1.14.1
+rouge-score==0.1.2
+scikit-learn==1.5.2
+rich>=13,<15
+structlog>=24,<26
+codetiming>=1.4,<2
+requests>=2.32,<3
+tqdm>=4.66,<5
+typing-extensions>=4.10,<5
+PyYAML>=6,<7
+pytest>=8,<9

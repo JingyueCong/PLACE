@@ -1,0 +1,16 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - model: Llama-3.1-8B-Instruct_RECAP
+  - eval: tofu_recap
+  - paths: default
+  - hydra: eval
+
+model:
+  model_args:
+    device_map: cuda
+
+mode: eval
+task_name: ???
+seed: 0

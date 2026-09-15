@@ -1,0 +1,15 @@
+dataset:
+  class_name: ToFU
+  name: locuslab/TOFU
+  # This must include the _perturbed suffix used by the frozen B0 run.
+  split: ???
+  # The published B0 assistants were tokenized at this effective limit.
+  max_len: 256
+
+# Llama-3 chat template, BUT without the leading <|begin_of_text|> — the
+# tokenizer adds BOS automatically when add_special_tokens=True (default) and
+# we'd otherwise get a duplicate BOS.
+conv_template:
+  question_start_token: "<|start_header_id|>system<|end_header_id|>\n\nYou are a helpful assistant.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n"
+  question_end_token: "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
+  answer_token: ""

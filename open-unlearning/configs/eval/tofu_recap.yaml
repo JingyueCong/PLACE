@@ -1,0 +1,26 @@
+# @package eval.tofu
+# RECAP-only TOFU suite. The Knowledge Truth Ratio is isolated here so the
+# upstream default TOFU suite and its runtime/summary surface remain unchanged.
+
+defaults:
+  - tofu_metrics:
+    - forget_Truth_Ratio
+    - forget_Truth_Ratio_Knowledge
+    - forget_quality
+    - forget_Q_A_Prob
+    - forget_Q_A_ROUGE
+    - model_utility
+    - privleak
+    - extraction_strength
+    - exact_memorization
+    - forget_Q_A_gibberish
+
+handler: TOFUEvaluator
+output_dir: ${paths.output_dir}
+metrics: {}
+overwrite: false
+forget_split: forget10
+holdout_split: holdout10
+retain_logs_path: null
+question_key: "question"
+batch_size: 32

@@ -1,0 +1,6 @@
+# Fit the factual cell while preserving the frozen assistant initialization on
+# its matched counterfactual control.  Both partitions come from forget data.
+forget_loss: GradDescentLossFunc
+retain_loss: AnswerMaskedKLLossFunc
+retain_weight: 0.3
+oracle_source: assistant_initialization

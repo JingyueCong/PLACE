@@ -1,0 +1,9 @@
+# RECAP A2 learns the placebo-relation contrast C10 versus C00.
+expand_forget: False
+with_retain: False
+with_perturb: False
+with_dpo: False
+
+data_role: recap_a2
+counterfactual_path: ???
+strict_retain_free: True

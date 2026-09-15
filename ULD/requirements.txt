@@ -1,0 +1,25 @@
+# RECAP assistant-training dependencies. These constraints agree with the
+# repository-level environment; use that file when installing both training
+# and evaluation components together.
+torch==2.1.1; python_version >= "3.10" and python_version < "3.11"
+torch==2.4.1; python_version >= "3.11" and python_version < "3.12"
+numpy==1.26.4; python_version >= "3.10" and python_version < "3.11"
+numpy==2.2.3; python_version >= "3.11" and python_version < "3.12"
+datasets==2.17.1; python_version >= "3.10" and python_version < "3.11"
+datasets==3.0.1; python_version >= "3.11" and python_version < "3.12"
+
+transformers==4.51.3
+tokenizers==0.21.4
+peft==0.15.2
+accelerate==0.34.2
+huggingface-hub==0.36.0
+safetensors>=0.4,<1
+hydra-core==1.3.2
+omegaconf==2.3.0
+lightning==2.2.1
+pytorch-lightning==2.2.1
+pandas==2.2.2
+rich>=13,<15
+structlog>=24,<26
+codetiming>=1.4,<2
+typing-extensions>=4.10,<5

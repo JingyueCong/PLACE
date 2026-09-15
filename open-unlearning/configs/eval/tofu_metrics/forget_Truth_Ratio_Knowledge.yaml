@@ -1,0 +1,14 @@
+# @package eval.tofu.metrics.forget_truth_ratio_knowledge
+# Knowledge-oriented Truth Ratio used by the paper's Memorization score.
+defaults:
+  - .@pre_compute.forget_Q_A_PARA_Prob: forget_Q_A_PARA_Prob
+  - .@pre_compute.forget_Q_A_PERT_Prob: forget_Q_A_PERT_Prob
+
+pre_compute:
+  forget_Q_A_PARA_Prob:
+    access_key: correct
+  forget_Q_A_PERT_Prob:
+    access_key: wrong
+
+handler: truth_ratio
+aggregator: prob_mean
