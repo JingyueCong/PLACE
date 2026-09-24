@@ -1,9 +1,17 @@
-# RECAP: Code for TOFU Experiments
+# PLACE: Code for TOFU Experiments
 
-This repository contains the official implementation for the RECAP
+This repository contains an anonymous implementation of PLACE for the
 Llama-3.1-8B / TOFU Forget10 experiment. It provides the selected B0
 configuration, deterministic data checks, standard TOFU evaluation, and the
 semantic-robustness evaluation utilities.
+
+## Anonymous review
+
+This repository is prepared for anonymous review. Author names, affiliations,
+contact details, and identifying project links are intentionally omitted.
+Existing script names, environment variables, artifact paths, and report names
+remain unchanged in command examples so that they continue to match the
+released code.
 
 ## Scope
 
@@ -14,7 +22,7 @@ not included, and their publication is pending. See
 [ARTIFACTS.md](ARTIFACTS.md) for the external artifact contract and status.
 
 The two incorporated projects retain their upstream MIT licenses. A separate
-root-level license for the RECAP-specific additions has not yet been selected;
+root-level license for the PLACE-specific additions has not yet been selected;
 the maintainers must add one before presenting this repository as a reusable
 archival artifact.
 
@@ -208,6 +216,6 @@ provenance as a separately reviewed artifact.
 
 This repository preserves the upstream MIT license texts in `ULD/LICENSE` and
 `open-unlearning/LICENSE`; attribution details are in [NOTICE](NOTICE). A paper
-citation and archival artifact identifier will be added when the public ICLR
-artifact is finalized. Do not cite an experiment-directory name as if it were
-a separate method or a seed-averaged result.
+citation and archival artifact identifier will be added after the anonymous
+review period. Do not cite an experiment-directory name as if it were a
+separate method or a seed-averaged result.
