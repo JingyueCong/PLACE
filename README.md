@@ -1,4 +1,4 @@
-# PLACE
+# PLACE: Code for TOFU Experiments
 
 PLACE is an anonymous research implementation for machine unlearning
 experiments on TOFU with Llama-3.1-8B-Instruct. The repository includes
@@ -7,9 +7,7 @@ training, evaluation, validation, and semantic-robustness utilities.
 ## Anonymous review
 
 This repository is prepared for anonymous review. Author names, affiliations,
-contact details, and identifying project links are intentionally omitted. Some
-internal script names and environment variables retain the `RECAP` prefix so
-that they continue to match the released code.
+contact details, and identifying project links are intentionally omitted.
 
 ## Installation
 
@@ -27,34 +25,18 @@ The reference workflow used Python 3.10 for training and Python 3.11 for
 evaluation. Separate environments can be selected with `TRAIN_PYTHON` and
 `EVAL_PYTHON`.
 
-## Quick start
+## Usage
 
-Commands should be run from the repository root. The main runner requires the
-external artifacts documented in [ARTIFACTS.md](ARTIFACTS.md):
+Commands should be run from the repository root. Obtain the external artifacts
+documented in [ARTIFACTS.md](ARTIFACTS.md), then use the entry points in
+`scripts/` for data validation, training, standard evaluation, and semantic
+evaluation. Required paths and runtime options are documented in each runner.
 
-```bash
-export RECAP_A1_DATA="$PWD/artifacts/recap-b0/a1.jsonl"
-export RECAP_A2_DATA="$PWD/artifacts/recap-b0/a2.jsonl"
-export RECAP_RETAIN_LOGS="$PWD/artifacts/recap-b0/retain90/TOFU_EVAL.json"
-export RECAP_MODEL_ROOT="$PWD/outputs/recap-b0"
-```
-
-Validate the inputs without training:
+Run the repository-level checks with:
 
 ```bash
-MODE=preflight bash scripts/run_recap_tofu_8b.sh
+python -m pytest -q
 ```
-
-Run training and standard evaluation:
-
-```bash
-MODE=all bash scripts/run_recap_tofu_8b.sh
-```
-
-Use `MODE=train` or `MODE=eval` to run either stage separately. Additional
-checkpoint, reference, model, GPU, and interpreter settings are documented in
-the runner. Semantic evaluation is available through
-`scripts/run_recap_semantic_eval.sh`.
 
 ## Artifacts
 
